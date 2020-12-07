@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  background-color: #17212B;
+  height: 74px;
+}
+
+.headerWrapper {
+  height: 74px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  width: 25.55px;
+  height: 35px;
+  left: calc(50% - 25.55px/2 - 1.23px);
+  top: 17px;
+}
+
+.searchInput {
+  width: 200px;
+  height: 40px;
+  background: #242F3D;
+  border-radius: 5px;
+  border: none;
+  padding: 20px;
+  color: #6C7782;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+/*# sourceMappingURL=Header.css.map */
