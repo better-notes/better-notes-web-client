@@ -1,0 +1,33 @@
+.noteColumn {
+  margin-top: 10px;
+  background-color: #17212B;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.tagTitle {
+  font-weight: bold;
+  height: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px;
+}
+
+.inputMargin {
+  margin-top: 7px;
+}
+/*# sourceMappingURL=NoteColumn.css.map */
