@@ -13,12 +13,6 @@ function Body() {
           <Col>
             <NoteColumn />
           </Col>
-          <Col>
-            <NoteColumn />
-          </Col>
-          <Col>
-            <NoteColumn />
-          </Col>
         </Row>
       </Container>
     </div>

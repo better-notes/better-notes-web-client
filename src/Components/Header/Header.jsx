@@ -9,7 +9,7 @@ function Header() {
       <Container>
         <div className="headerWrapper">
           <Logo className="logo" />
-          <input className="searchInput" type="text" placeholder="Search" />
+          <input className="searchInput" type="text" disabled placeholder="Search" />
         </div>
       </Container>
     </div>
