@@ -29,7 +29,7 @@
   top: 17px;
 }
 
-.searchInput {
+.Input {
   width: 200px;
   height: 40px;
   background: #242F3D;
@@ -39,7 +39,7 @@
   color: #6C7782;
 }
 
-.searchInput:focus {
+.Input:focus {
   outline: none;
 }
 /*# sourceMappingURL=Header.css.map */

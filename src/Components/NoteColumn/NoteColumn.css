@@ -30,4 +30,17 @@
 .inputMargin {
   margin-top: 7px;
 }
+
+.noteTag {
+  height: 20px;
+  font-size: 0.7em;
+  background-color: green;
+}
+
+.tagsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 10px;
+}
 /*# sourceMappingURL=NoteColumn.css.map */

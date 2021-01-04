@@ -7,6 +7,7 @@ import Body from './Components/Body/Body';
 import fetchNotes from './api-interaction/fetchNotes';
 
 function App({ notes, dispatch }) {
+  console.log(notes);
   return (
     <div className="App">
       <Header />
@@ -16,12 +17,24 @@ function App({ notes, dispatch }) {
 }
 
 App.propTypes = {
-  notes: PropTypes.array,
-  dispatch: PropTypes.func,
+  notes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id_: PropTypes.string,
+      text: PropTypes.string,
+      created_at: PropTypes.string,
+      tags: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string,
+        }).isRequired,
+      ).isRequired,
+    }).isRequired,
+  ).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (store) => ({
   notes: store.notes,
+  error: store.error,
 });
 
 const mapDispatchToProps = (dispatch) => ({
