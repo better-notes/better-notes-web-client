@@ -19,6 +19,16 @@ export default function rootReducer(state = initialState, action) {
       };
     case ACTION_NAMES.FAIL_ADD_NOTE:
       return state;
+    case ACTION_NAMES.DELETE_NOTE:
+      return {
+        ...state,
+        notes: [
+          // eslint-disable-next-line no-underscore-dangle
+          ...state.notes.filter((note) => note.id_ !== action.payload[0].id_),
+        ],
+      };
+    case ACTION_NAMES.FAIL_DELETE_NOTE:
+      return state;
     default:
       return state;
   }

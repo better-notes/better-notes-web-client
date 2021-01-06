@@ -3,7 +3,7 @@ import './Body.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import TagInput from '../TagInput/TagInput';
-import NoteColumn from '../NoteColumn/NoteColumn';
+import NoteList from '../NoteList/NoteList';
 
 function Body({
   notes, error, fetchNotes,
@@ -14,7 +14,7 @@ function Body({
         <TagInput />
         <Row>
           <Col>
-            <NoteColumn notes={notes} error={error} fetchNotes={fetchNotes} />
+            <NoteList notes={notes} error={error} fetchNotes={fetchNotes} />
           </Col>
         </Row>
       </Container>

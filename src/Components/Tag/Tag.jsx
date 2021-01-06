@@ -14,9 +14,7 @@ function Tag({ tag }) {
 export default Tag;
 
 Tag.propTypes = {
-  tag: PropTypes.string,
-};
-
-Tag.defaultProps = {
-  tag: null,
+  tag: PropTypes.shape({
+    name: PropTypes.string,
+  }).isRequired,
 };

@@ -7,7 +7,6 @@ import Body from './Components/Body/Body';
 import fetchNotes from './api-interaction/fetchNotes';
 
 function App({ notes, dispatch }) {
-  console.log(notes);
   return (
     <div className="App">
       <Header />

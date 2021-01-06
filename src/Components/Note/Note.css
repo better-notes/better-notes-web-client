@@ -13,6 +13,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 
 .tagTitle {
@@ -27,20 +28,23 @@
   padding: 0px 10px;
 }
 
-.inputMargin {
-  margin-top: 7px;
-}
-
-.noteTag {
-  height: 20px;
-  font-size: 0.7em;
-  background-color: green;
-}
-
 .tagsList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0px 10px;
 }
-/*# sourceMappingURL=NoteColumn.css.map */
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.disabled {
+  display: none;
+}
+/*# sourceMappingURL=Note.css.map */
