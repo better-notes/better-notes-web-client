@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import TextareaAutosize from 'react-textarea-autosize';
 import createNote from '../../api-interaction/createNote';
 
 import './TagInput.css';
@@ -8,7 +9,7 @@ function TagInput() {
   const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
   function addNote(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && !event.shiftKey) {
       if (inputValue.trim() !== '') {
         dispatch(createNote(inputValue));
         setInputValue('');
@@ -19,7 +20,7 @@ function TagInput() {
   }
   return (
     <div className="tagInput">
-      <input
+      <TextareaAutosize
         className="noteInput fullWidth"
         type="text"
         placeholder="Add note..."

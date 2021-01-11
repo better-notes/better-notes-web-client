@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-underscore-dangle */
 import { ACTION_NAMES } from '../actions/actions';
 
 const initialState = {
@@ -23,12 +25,18 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         notes: [
-          // eslint-disable-next-line no-underscore-dangle
           ...state.notes.filter((note) => note.id_ !== action.payload[0].id_),
         ],
       };
     case ACTION_NAMES.FAIL_DELETE_NOTE:
       return state;
+    case ACTION_NAMES.EDIT_NOTE:
+      return {
+        ...state,
+        notes: [
+          ...state.notes.map((note) => ((note.id_ === action.payload[0].id_) ? action.payload[0] : note)),
+        ],
+      };
     default:
       return state;
   }

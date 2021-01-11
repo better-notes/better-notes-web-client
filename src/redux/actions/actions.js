@@ -6,6 +6,8 @@ export const ACTION_NAMES = {
   FAIL_ADD_NOTE: 'FAIL_ADD_NOTE',
   DELETE_NOTE: 'DELETE_NOTE',
   FAIL_DELETE_NOTE: 'FAIL_DELETE_NOTE',
+  EDIT_NOTE: 'EDIT_NOTE',
+  FAIL_EDIT_NOTE: 'FAIL_EDIT_NOTE',
 };
 export const failFetchNotes = (error) => ({
   type: ACTION_NAMES.FAIL_FETCH,
@@ -31,5 +33,15 @@ export const removeNote = (data) => ({
 
 export const failDeleteNote = (error) => ({
   type: ACTION_NAMES.FAIL_DELETE_NOTE,
+  payload: error,
+});
+
+export const changeNote = (data) => ({
+  type: ACTION_NAMES.EDIT_NOTE,
+  payload: data,
+});
+
+export const failChangeNote = (error) => ({
+  type: ACTION_NAMES.FAIL_EDIT_NOTE,
   payload: error,
 });
