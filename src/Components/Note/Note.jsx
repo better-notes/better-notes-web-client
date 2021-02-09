@@ -27,12 +27,11 @@ function Note({ note }) {
     }
   }
   const tagsList = note.tags.map((tag) => (
-    <Tag tag={tag} key={tag.id_} />
+    <Tag tag={tag} key={tag.name} />
   ));
   return (
     <div
       className="noteColumn"
-      key={note.created_at}
       onFocus={() => setIsHovered(true)}
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}

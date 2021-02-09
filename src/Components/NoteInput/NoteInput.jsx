@@ -15,6 +15,7 @@ function NoteInput() {
       } else {
         setInputValue('');
       }
+      event.preventDefault();
     }
   }
   return (
