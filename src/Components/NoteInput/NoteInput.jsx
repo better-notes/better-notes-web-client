@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import TextareaAutosize from 'react-textarea-autosize';
 import createNote from '../../api-interaction/createNote';
+import './NoteInput.css';
 
-import './TagInput.css';
-
-function TagInput() {
+function NoteInput() {
   const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
   function addNote(event) {
@@ -19,7 +18,7 @@ function TagInput() {
     }
   }
   return (
-    <div className="tagInput">
+    <div className="noteInputWrapper">
       <TextareaAutosize
         className="noteInput fullWidth"
         type="text"
@@ -32,4 +31,4 @@ function TagInput() {
   );
 }
 
-export default TagInput;
+export default NoteInput;

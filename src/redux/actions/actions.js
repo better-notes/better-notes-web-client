@@ -1,7 +1,7 @@
 export const ACTION_NAMES = {
-  START_FETCH: 'START_FETCH',
-  FAIL_FETCH: 'FAIL_FETCH',
-  FINISH_FETCH: 'FINISH_FETCH',
+  START_READ: 'START_READ',
+  FAIL_READ: 'FAIL_READ',
+  FINISH_READ: 'FINISH_READ',
   ADD_NOTE: 'ADD_NOTE',
   FAIL_ADD_NOTE: 'FAIL_ADD_NOTE',
   DELETE_NOTE: 'DELETE_NOTE',
@@ -9,12 +9,12 @@ export const ACTION_NAMES = {
   EDIT_NOTE: 'EDIT_NOTE',
   FAIL_EDIT_NOTE: 'FAIL_EDIT_NOTE',
 };
-export const failFetchNotes = (error) => ({
-  type: ACTION_NAMES.FAIL_FETCH,
+export const failReadNotes = (error) => ({
+  type: ACTION_NAMES.FAIL_READ,
   payload: error,
 });
-export const finishFetchNotes = (data) => ({
-  type: ACTION_NAMES.FINISH_FETCH,
+export const finishReadNotes = (data) => ({
+  type: ACTION_NAMES.FINISH_READ,
   payload: data,
 });
 export const addNote = (data) => ({

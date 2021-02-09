@@ -16,7 +16,7 @@
   position: relative;
 }
 
-.tagTitle {
+.noteText {
   font-weight: bold;
   min-height: 37px;
   display: -webkit-box;

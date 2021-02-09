@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -7,7 +8,7 @@ import './Note.css';
 import { ReactComponent as EditIco } from './pencil-edit.svg';
 import { ReactComponent as TrashIco } from './trash-empty.svg';
 import deleteNote from '../../api-interaction/deleteNote';
-import updateNote from '../../api-interaction/editNote';
+import updateNote from '../../api-interaction/updateNote';
 
 function Note({ note }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,7 +27,7 @@ function Note({ note }) {
     }
   }
   const tagsList = note.tags.map((tag) => (
-    <Tag tag={tag} key={tag.name + Math.random()} />
+    <Tag tag={tag} key={tag.id_} />
   ));
   return (
     <div
@@ -46,7 +47,7 @@ function Note({ note }) {
             value={inputValue}
             onChange={(event) => { setInputValue(event.target.value); }}
           />
-        ) : <div className="tagTitle">{note.text}</div>}
+        ) : <div className="noteText">{note.text}</div>}
       <div className="tagsList">{tagsList}</div>
       <div className={(isHovered) ? 'active' : 'disabled'}>
         <EditIco onClick={() => { setIsEditActive(!isEditActive); }} />
