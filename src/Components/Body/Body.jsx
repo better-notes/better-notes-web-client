@@ -1,23 +1,17 @@
 import React from 'react';
 import './Body.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import TagInput from '../TagInput/TagInput';
-import NoteColumn from '../NoteColumn/NoteColumn';
+import NoteInput from '../NoteInput/NoteInput';
+import NoteList from '../NoteList/NoteList';
 
 function Body() {
   return (
     <div className="body">
       <Container>
-        <TagInput />
+        <NoteInput />
         <Row>
           <Col>
-            <NoteColumn />
-          </Col>
-          <Col>
-            <NoteColumn />
-          </Col>
-          <Col>
-            <NoteColumn />
+            <NoteList />
           </Col>
         </Row>
       </Container>

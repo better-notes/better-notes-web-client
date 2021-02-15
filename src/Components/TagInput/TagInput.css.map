@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,SAAS;EAClB,aAAa,EAAE,IAAI;CAAG;;AAE1B,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,IAAI;CAAG",
-    "sources": [
-        "TagInput.sass"
-    ],
-    "names": [],
-    "file": "TagInput.css"
-}

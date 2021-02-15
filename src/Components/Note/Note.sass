@@ -7,13 +7,24 @@
     display: flex
     flex-direction: column
     align-items: flex-start
+    position: relative
 
-.tagTitle
+.noteText
     font-weight: bold
-    height: 37px
+    min-height: 37px
     display: flex
     align-items: center
     padding: 0px 10px
 
-.inputMargin
-    margin-top: 7px
+.tagsList
+    display: flex
+    padding: 0px 10px 
+
+.active
+    display: flex
+    position: absolute
+    top: 5px
+    right: 5px
+
+.disabled
+    display: none
